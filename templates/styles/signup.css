@@ -1,0 +1,52 @@
+html, body {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+body{
+	background: ghostwhite;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	align: center;
+}
+form{
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+ 	font-family: Comic Sans Ms;
+ 	border-radius: 15px;
+ 	position: relative;
+ 	background: rgb(211,211,211);
+ 	width: 120%;
+}
+form header{
+	background: rgb(40,40,40);
+	padding: 15px 15px;
+	border-radius: 10px 10px 0 0;
+	color: white;
+	font-weight: 400;
+}
+form label{
+	padding: 5px 5px;
+	margin-left: 10px;
+	font-color: #ffffff;
+}
+form input{
+	display: block;
+	width: 78%;
+	margin-left: 15px;
+	font-size: 1em;
+	border-radius: 6px;
+}
+#btn{
+	position: relative;
+	margin-bottom: 30px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+#btn:hover{
+	background: rgb(40,40,40);
+}

@@ -1,0 +1,51 @@
+body{
+	background: rgb(217, 200, 220);;
+}
+#whole{
+	width:960px;
+	margin:0 auto;
+	border-width: 15px;
+	padding: 15px;
+}
+
+#head{
+	background: rgb(40,40,40);
+	padding: 15px 15px;
+	border-radius: 10px 10px 0 0;
+	color: white;
+	font-weight: 400;
+}
+#article{
+	border-style: solid;
+	border-width: 1px;
+	font-size: 20px;
+}
+#button{
+	font-size: 18px;
+}
+#body_footer{
+	background: rgb(40,40,40);
+	padding: 15px 15px;
+	
+}
+#write_up{
+	padding: 10px 10px;
+}
+
+.menu li{
+	text-align: center;
+	text-decoration: none;
+	display: inline;
+	padding: 10px;
+	font-size: 20px;
+	font-weight: bolder;
+	margin-left: 80px;
+}
+header h1{
+	text-align: center;
+}
+.menu{
+	background: #c0c0c0;
+	list-style: none;
+	padding: 5px 5px;
+}

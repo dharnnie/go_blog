@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="styles/login.css">
+</head>
+<body>
+	<div id = login_box> 
+		
+		<form id = "login-form" action="/upage" method="POST">
+		<header>Welcome | Login <br> <p>{{ .LoginFail}}</p></header>
+			<label>Nick</label><br>
+				<input id = "in" type = "text" name = "nick"><br>
+			<label>Password</label><br>
+				<input type = "password" name = "password"><br>
+			<input id = "btn" type = "submit" value = "Login">
+		</form>
+		<p>Don't have an account? <a href = "/signup">Sign Up</a></p>
+	</div>
+</body>
+</html>

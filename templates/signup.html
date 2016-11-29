@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles/signup.css">
+	<meta charset="UTF-8">
+	<title>Sign Up</title>
+</head>
+<body>
+	<div id = signup_box>
+		<form action = "/signup" method = "POST">
+			<header>Welcome | SignUP
+			<p> {{ .SignUpFail}}</p>
+			</header>
+
+			<label>Nick</label><br>
+			<input type = "text" name = "nick"><br>
+			<label>Password</label><br>
+			<input type = "password" name = "password"><br>
+			<input type = "submit" id = "btn"value = "Sign up">
+		</form>
+		<p>Already Signed up? <a href="/login">Login</a></p>
+	</div>
+</body>
+</html>
