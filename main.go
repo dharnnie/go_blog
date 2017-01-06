@@ -37,5 +37,6 @@ func serveWeb(){
 	}
 }
 
+// t := i.(type) // get var type
 
 
