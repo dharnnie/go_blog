@@ -15,6 +15,12 @@ func main() {
 
 func serveWeb(){
 	
+	port := os.Getenv(){
+		if port == ""{
+			port = ":9000"
+		}
+	}
+	
 	http.HandleFunc("/styles/", handlers.ServeResource)
 	myMux := mux.NewRouter()
 	myMux.HandleFunc("/", handlers.Home)
@@ -24,7 +30,7 @@ func serveWeb(){
 	myMux.HandleFunc("/upage", handlers.ULPage)
 	myMux.HandleFunc("/say", handlers.PostComment)
 	http.Handle("/", myMux)
-	err := http.ListenAndServe(":9000", context.ClearHandler(http.DefaultServeMux))
+	err := http.ListenAndServe(port, context.ClearHandler(http.DefaultServeMux))
 	if err != nil{
 		log.Fatal("ListenAndServe error: -> This error occured ", err)
 	}
