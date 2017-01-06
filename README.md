@@ -25,4 +25,4 @@ Folder/Package : handlers
 Folder/Package : templates
 	Contains everything that may end with .html , .css , and .js . And Oh!! There are no JavaScript codes here.
 
-	WARNING - The interfaces suck - Be prepared!!!
+	WARNING - The user interfaces suck - Be prepared!!!
