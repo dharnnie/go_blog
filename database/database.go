@@ -8,7 +8,7 @@ import(
 )
 const(
 	prepQuery = "INSERT INTO users(nick, password) VALUES(?,?)"
-	db_path = "root:mysqlrootpassword@/cftrial"
+	db_path = "root:databasepassword@/databaseName"
 	presenceQuery = "SELECT COUNT(*) FROM users WHERE nick = ?"
 	retPasswordQry = "SELECT password FROM users WHERE nick = ?"
 )
