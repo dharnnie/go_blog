@@ -16,11 +16,10 @@ func main() {
 
 func serveWeb(){
 	
-	port := os.Getenv(){
+	port := os.Getenv()
 		if port == ""{
 			port = ":9000"
 		}
-	}
 	
 	http.HandleFunc("/styles/", handlers.ServeResource)
 	myMux := mux.NewRouter()
