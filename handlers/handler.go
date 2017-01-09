@@ -166,18 +166,14 @@ func ULPage(rw http.ResponseWriter, req *http.Request) {
 func SignUp(rw http.ResponseWriter, req *http.Request){
 	if req.Method == "GET"{
 		t, err := template.ParseFiles("templates/signup.html")
-		if err != nil{
-			fmt.Println("Error occured parsing signup")
-		}
+		handleErr(err,"Error occured parsing signup" )
 		t.Execute(rw, nil)
 	}else{
 		req.ParseForm()
 		// add if IsSignedUp here.. To avoid user duplication
 		if database.IsSignedUp(req.FormValue("nick")){
 			t, err := template.ParseFiles("templates/signup.html")
-			if err != nil{
-				log.Println("Could parse a redir to SignUp:", err)
-			}
+			handleErr(err,"Could parse a redir to SignUp:" )
 			t.Execute(rw, AuthErrs{
 				SignUpFail: "The Nick is already taken!!!",
 				})
@@ -187,9 +183,7 @@ func SignUp(rw http.ResponseWriter, req *http.Request){
 				log.Printf("User has %s been created with pass %s: ", req.FormValue("nick"), req.FormValue("password"))
 				// set new session
 				t, err := template.ParseFiles("templates/login.html")	
-				if err != nil{
-					log.Println("Can't parse login.html @ SignUp:", err)
-				}	
+				handleErr(err,"Can't parse login.html @ SignUp:" )	
 				t.Execute(rw, nil)
 			}
 		}
@@ -206,6 +200,12 @@ func SignUp(rw http.ResponseWriter, req *http.Request){
 // func serveResource() {
 	
 // }
+
+func handleErr(e error, i string){
+	if e != nil{
+		log.Println(i, e)
+	}
+}
 
 func GetTime()string {
 	t := time.Now()
